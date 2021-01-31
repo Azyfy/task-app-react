@@ -32,14 +32,13 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        <div>
-          <form onSubmit={this.addTask}>
+      <div id="container">
+        <div id="form-container">
+          <form id="form" onSubmit={this.addTask}>
             <input type="text" onChange={this.handleInput} value={this.state.task} placeholder="Add task" />
             <button type="submit"> Add </button>
           </form>
         </div>
-        Hello!
           <div>
             <ul>
               <Overview tasks={ this.state.tasks } />

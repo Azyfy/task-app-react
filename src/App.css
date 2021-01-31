@@ -1,0 +1,28 @@
+#container {
+    border: 3px solid silver;
+    border-radius: 25px;
+    min-height: 250px;
+    width: 50%;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    margin-left: 50px;
+    min-width: 350px;
+}
+
+#form-container {
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+#form {
+    padding: 25px
+}
+
+.list {
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
