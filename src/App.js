@@ -12,7 +12,17 @@ class App extends Component {
 
     this.addTask = this.addTask.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.removeCurrent = this.removeCurrent.bind(this);
 
+  }
+
+  removeCurrent(e) {
+
+    this.setState({
+      tasks: this.state.tasks.filter(task => {
+        return task !== e.target.id
+      }),
+    });
   }
 
   handleInput(e) {
@@ -28,7 +38,7 @@ class App extends Component {
       alert("Task already exists");
       return;
     }
-    
+
     this.setState({
     tasks: this.state.tasks.concat(this.state.task),
     task: "",
@@ -47,7 +57,7 @@ class App extends Component {
         </div>
           <div>
  
-              <Overview tasks={ this.state.tasks } />
+              <Overview tasks={ this.state.tasks } remove={this.removeCurrent} />
  
           </div>
       </div>
