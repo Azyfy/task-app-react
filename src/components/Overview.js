@@ -7,7 +7,7 @@ const Overview = (props) => {
     return (
       <ul>
         {tasks.map((task) => {
-          return <li className="list" id={task} key={task}>{task} <button id={task} onClick={remove} className="remove-btn">R</button></li> ;
+          return <li className="list" id={task} key={task}>{tasks.indexOf(task)+1}:  {task} <button id={task} onClick={remove} className="remove-btn">R</button></li> ;
         })}
       </ul>
     );
