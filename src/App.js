@@ -23,6 +23,12 @@ class App extends Component {
 
   addTask(e) {
     e.preventDefault();
+
+    if(this.state.tasks.indexOf(this.state.task) > -1 ) {
+      alert("Task already exists");
+      return;
+    }
+    
     this.setState({
     tasks: this.state.tasks.concat(this.state.task),
     task: "",
@@ -40,9 +46,9 @@ class App extends Component {
           </form>
         </div>
           <div>
-            <ul>
+ 
               <Overview tasks={ this.state.tasks } />
-            </ul>
+ 
           </div>
       </div>
     );
